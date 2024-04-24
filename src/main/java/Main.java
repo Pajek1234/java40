@@ -1,5 +1,4 @@
 
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -26,11 +25,14 @@ class Main {
             String name = scanner.next();
             System.out.print("Wiek: ");
             int age = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
             s.addStudent(new Student(name, age));
             break;
           case 2:
-            System.out.println("Niepoprawny wybór. Spróbuj ponownie.");
+            var students = s.getStudents();
+            for (Student current : students) {
+              System.out.println(current.ToString());
+            }
             break;
           case 3:
             wybor = false;
