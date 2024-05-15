@@ -23,10 +23,12 @@ class Main {
             System.out.println("Dodaj nowego studenta:");
             System.out.print("Imię: ");
             String name = scanner.next();
+            System.out.print("nazwisko: ");
+            String surname = scanner.next();
             System.out.print("Wiek: ");
             int age = scanner.nextInt();
             scanner.nextLine();
-            s.addStudent(new Student(name, age));
+            s.addStudent(new Student(name, surname, age));
             break;
           case 2:
             var students = s.getStudents();
@@ -36,6 +38,7 @@ class Main {
             break;
           case 3:
             wybor = false;
+            System.out.println("zły wybór");
             break;
           default:
             System.out.println("Niepoprawny wybór. Spróbuj ponownie.");
