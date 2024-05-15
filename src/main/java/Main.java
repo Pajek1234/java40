@@ -27,8 +27,10 @@ class Main {
             String surname = scanner.next();
             System.out.print("Wiek: ");
             int age = scanner.nextInt();
+            System.out.print("Data urodzin: ");
+            String datauro = scanner.next();
             scanner.nextLine();
-            s.addStudent(new Student(name, surname, age));
+            s.addStudent(new Student(name, surname, age, datauro));
             break;
           case 2:
             var students = s.getStudents();
